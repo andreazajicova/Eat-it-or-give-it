@@ -1,0 +1,42 @@
+<%= form_with(model: food_item, local: true) do |form| %>
+  <% if food_item.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(food_item.errors.count, "error") %> prohibited this food_item from being saved:</h2>
+
+      <ul>
+      <% food_item.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-group">
+    <%= form.label :title %>
+    <%= form.text_field :title, class: 'form-control input-lg', placeholder: 'Brocoli' %>
+  </div>
+
+  <div class="field">
+    <%= form.label :expiration_date %>
+    <%= form.datetime_select :expiration_date, id: :food_item_expiration_date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address, id: :food_item_address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :available_start %>
+    <%= form.datetime_select :available_start, id: :food_item_available_start %>
+  </div>
+
+  <div class="field">
+    <%= form.label :available_end %>
+    <%= form.datetime_select :available_end, id: :food_item_available_end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

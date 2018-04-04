@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @food_item.title %>
+</p>
+
+<p>
+  <strong>Expiration date:</strong>
+  <%= @food_item.expiration_date %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @food_item.address %>
+</p>
+
+<p>
+  <strong>Available start:</strong>
+  <%= @food_item.available_start %>
+</p>
+
+<p>
+  <strong>Available end:</strong>
+  <%= @food_item.available_end %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @food_item.user %>
+</p>
+
+<%= link_to 'Edit', edit_food_item_path(@food_item) %> |
+<%= link_to 'Back', food_items_path %>
