@@ -19,6 +19,7 @@
     <% @food_items.each do |food_item| %>
       <tr>
         <td><%= food_item.title %></td>
+        <td><%= image_tag food_item.food_item_image(:thumb)%></td>
         <td><%= food_item.expiration_date %></td>
         <td><%= food_item.address %></td>
         <td><%= food_item.available_start %></td>
