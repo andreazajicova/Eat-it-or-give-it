@@ -8,13 +8,13 @@
     </div>
 </header>
 <br>
-<div class="featurette container" id="about">
-            <img class="featurette-image img-circle img-responsive pull-right" src="http://placehold.it/200x200">
-            <h2 class="featurette-heading">Food
-                <span class="text-muted">Categories</span>
-            </h2>
-            <p class="lead">Choose food category you are looking for.</p>
-            <p class="lead">For example: canned food, vegetables, fruits, bottled drinks, etc. ...</p>
-        </div>
-
-        <hr class="featurette-divider">
+<div class="container">
+    <div class="row">
+            <div class="col-sm-4">
+                <%= image_tag 'groceries.jpg', class: 'img-circle img-responsive img-center' %>
+                <h2 style="text-align: center">Food Categories</h2>
+                <p>Choose food category you are looking for. For example: canned food, vegetables, fruits, bottled drinks, etc. ... </p>
+              <center>
+              <%= link_to 'Choose Category', categories_food_categories_path, class: "btn btn-primary" %>
+               </center>
+            </div>

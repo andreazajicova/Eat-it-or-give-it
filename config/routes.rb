@@ -5,4 +5,6 @@ Rails.application.routes.draw do
   get 'about' => 'pages#about'
 
 get 'categories/vegetables' => 'pages#vegetables'
+get 'categories/food_categories' => 'pages#food_categories'
+get 'categories/canned_food' => 'pages#canned_food'
 end
