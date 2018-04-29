@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180426111203) do
+ActiveRecord::Schema.define(version: 20180426181755) do
 
   create_table "food_items", force: :cascade do |t|
     t.string "title"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20180426111203) do
     t.string "food_item_image_content_type"
     t.integer "food_item_image_file_size"
     t.datetime "food_item_image_updated_at"
+    t.string "category"
     t.index ["user_id"], name: "index_food_items_on_user_id"
   end
 
