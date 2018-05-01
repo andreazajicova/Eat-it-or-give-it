@@ -1,0 +1,7 @@
+<h1>Bottled Drinks</h1>
+
+<% @bottled_drinks.each do |drink| %>
+<%= drink.title %>
+<%= drink.address %>
+<%= image_tag drink.food_item_image %>
+<% end %>

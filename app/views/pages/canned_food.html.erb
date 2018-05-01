@@ -1,1 +1,7 @@
 <h1>Canned Food</h1>
+
+<% @canned_food.each do |canned_food| %>
+<%= canned_food.title %>
+<%= image_tag canned_food.food_item_image %>
+<%= canned_food.address %>
+<% end %>
