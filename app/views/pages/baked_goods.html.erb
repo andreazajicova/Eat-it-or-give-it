@@ -1,0 +1,17 @@
+<h1>Baked Goods</h1>
+
+
+<% @baked_goods.each do |baked_goods| %>
+<div class="container-fluid">
+<div class="col-sm-4">
+<div class="panel panel-success">
+        <div class="panel-heading"><%= baked_goods.title %></div>
+        <div class="panel-body"><%= image_tag baked_goods.food_item_image(:medium) %></div>
+        <div class="panel-footer">
+            <strong>Pick up at (PLACE):</strong><%= baked_goods.address %><br>
+            <strong>Pick up at (TIME):</strong><%= baked_goods.available_start %>
+            <%= baked_goods.available_end %></div>
+      </div>
+      </div>
+<% end %>
+</div>

@@ -1,7 +1,17 @@
 <h1>Bottled Drinks</h1>
 
 <% @bottled_drinks.each do |drink| %>
-<%= drink.title %>
-<%= drink.address %>
-<%= image_tag drink.food_item_image %>
+
+<div class="container-fluid">
+<div class="col-sm-4">
+<div class="panel panel-success">
+        <div class="panel-heading"><%= drink.title %></div>
+        <div class="panel-body"><%= image_tag drink.food_item_image(:medium) %></div>
+        <div class="panel-footer">
+            <strong>Pick up at (PLACE):</strong><%= drink.address %><br>
+            <strong>Pick up at (TIME):</strong><%= drink.available_start %>
+            <%= drink.available_end %></div>
+      </div>
+      </div>
 <% end %>
+</div>

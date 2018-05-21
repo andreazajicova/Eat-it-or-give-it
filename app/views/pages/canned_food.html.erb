@@ -1,7 +1,17 @@
 <h1>Canned Food</h1>
 
+
 <% @canned_food.each do |canned_food| %>
-<%= canned_food.title %>
-<%= image_tag canned_food.food_item_image %>
-<%= canned_food.address %>
+<div class="container-fluid">
+<div class="col-sm-4">
+<div class="panel panel-success">
+        <div class="panel-heading"><%= canned_food.title %></div>
+        <div class="panel-body"><%= image_tag canned_food.food_item_image(:medium) %></div>
+        <div class="panel-footer">
+            <strong>Pick up at (PLACE):</strong><%= canned_food.address %><br>
+            <strong>Pick up at (TIME):</strong><%= canned_food.available_start %>
+            <%= canned_food.available_end %></div>
+      </div>
+      </div>
 <% end %>
+</div>

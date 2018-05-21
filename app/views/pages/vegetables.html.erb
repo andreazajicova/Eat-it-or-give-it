@@ -1,7 +1,17 @@
 <h1>Vegetables</h1>
 
 <% @vegetables.each do |vegetable| %>
-<%= vegetable.title %>
-<%= vegetable.address %>
-<%= image_tag vegetable.food_item_image %>
+<div class="container-fluid">
+<div class="col-sm-4">
+<div class="panel panel-success">
+        <div class="panel-heading"><%= vegetable.title %></div>
+        <div class="panel-body"><%= image_tag vegetable.food_item_image(:medium) %></div>
+        <div class="panel-footer">
+            <strong>Pick up at (PLACE):</strong><%= vegetable.address %><br>
+            <strong>Pick up at (TIME):</strong><%= vegetable.available_start %>
+            <%= vegetable.available_end %></div>
+      </div>
+      </div>
 <% end %>
+</div>
+
